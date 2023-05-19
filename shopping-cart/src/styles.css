@@ -1,0 +1,44 @@
+.container {
+    display: flex;
+    justify-content: center;
+}
+.nav {
+    display:flex;
+    justify-content: center;
+    gap: 154px;
+    margin-top: 63px;
+}
+.ShoppingBag {
+width: 32px;
+height: 32px;
+}
+
+h1 {
+font-size: 24px;
+font-weight: 600;
+line-height: 24px;
+letter-spacing: 0em;
+
+}
+
+.ellipse {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: red;
+    left: calc(50% - 20px/2 + 138px);
+    top: 68px;
+    margin-left: 8px;
+    text-align: center;
+
+}
+.productQuantity {
+position: absolute;
+width: 390px;
+height: 35px;
+left: calc(50% - 390px/2);
+margin-top: 141px;
+background: rgba(0, 0, 0, 0.03);
+text-align: center;
+}
