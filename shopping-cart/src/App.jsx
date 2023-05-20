@@ -9,7 +9,10 @@ function App() {
     <>
        <Page />
       <ProductList />
-      <ProductCard />
+      <ProductList />
+      <ProductList />
+      
+      
 
     </>
   );
