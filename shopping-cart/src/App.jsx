@@ -4,6 +4,8 @@ import HM from '../src/Images/HM.png';
 import Ketasi from '../src/Images/Ketasi.png';
 import ShoppingBag from '../src/Images/shopping-bag.png';
 
+
+
 function App() {
   const [products, setProducts] = useState([
     {
@@ -69,15 +71,18 @@ function App() {
        <div className='price'>
       <h2>{item.price}</h2>
       </div>
-      <button className='button' onClick={() => addToCart(item)}> Add to cart</button>
+      <button className='red-button' onClick={() => addToCart(item)}> Add to cart</button>
       </div> 
       </div> 
    )
         })}
+        <div className='total-wrapper'>
         <div className="total">
-        <h3>Total Price: ${totalPrice}</h3>
+        Total  <h3>${totalPrice}</h3>
       </div>
-    </div> 
+      <button className='buy'>Checkout</button>
+    </div>
+     </div>
   );
 }
 
