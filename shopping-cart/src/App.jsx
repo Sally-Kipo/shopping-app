@@ -1,16 +1,10 @@
 import React, { useState} from 'react';
-import Page from './Componenets/Page';
-import ProductList from './Componenets/ProductList';
-import ProductCard from './Componenets/ProductCard';
 import Bag from '../src/Images/bag.png';
 import HM from '../src/Images/HM.png';
 import Ketasi from '../src/Images/Ketasi.png';
-import Navbar from './Componenets/Page';
 import ShoppingBag from '../src/Images/shopping-bag.png';
 
-
 function App() {
-  
   const [products, setProducts] = useState([
     {
     id: 0,
@@ -41,10 +35,15 @@ function App() {
   ]);
 
   const [cartCount, setCartCount] = useState(0);
+  const [totalPrice, setTotalPrice] = useState(0);
 
   function addToCart (item) {
      setCartCount((prevCount) => prevCount + 1);
+     const price = parseFloat(item.price.replace(',', '').slice(1));
+     setTotalPrice((prevPrice) => prevPrice + price);
   }
+
+  
   return (
      
     <div className="app">
@@ -53,7 +52,7 @@ function App() {
       <h1>Shopping Cart</h1>
       <img className="ShoppingBag" src={ShoppingBag} alt="" />
       <div className="ellipse">{cartCount}</div>
-      <div className='productQuantity'> {products.lenght} item </div>
+      <div className='productQuantity'> {products.length} Items </div>
     </div>
    
       {products.map((item) => {
@@ -75,6 +74,9 @@ function App() {
       </div> 
    )
         })}
+        <div className="total">
+        <h3>Total Price: ${totalPrice}</h3>
+      </div>
     </div> 
   );
 }
