@@ -44,8 +44,6 @@ function App() {
      const price = parseFloat(item.price.replace(',', '').slice(1));
      setTotalPrice((prevPrice) => prevPrice + price);
   }
-
-  
   return (
      
     <div className="app">
